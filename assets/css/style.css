@@ -1298,3 +1298,26 @@ section {
 }
 
 
+.services-list {
+  border: 2px solid #ddd; /* Borde alrededor del recuadro */
+  padding: 15px; /* Espaciado dentro del recuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo suave */
+}
+
+.services-list a {
+  display: block;
+  padding: 10px 5px; /* Espaciado entre los enlaces */
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.services-list a:hover {
+  background-color: #e9ecef; /* Color de fondo al pasar el mouse */
+  color: #0056b3; /* Color de texto al pasar el mouse */
+}
+
+.services-list a.active {
+  color: #0056b3;
+}
