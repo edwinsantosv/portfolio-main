@@ -772,24 +772,41 @@ section {
   margin-bottom: 20px;
 }
 
+.service-details h2 {
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
 .service-details h3 {
   font-size: 26px;
   font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #050d18;
 }
 
 .service-details h4 {
   font-size: 20px;
   font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #050d18;
 }
 
 .service-details p {
   font-size: 15px;
+  font-family: "Raleway", sans-serif;
 }
 
 .service-details ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
+  font-family: "Raleway", sans-serif;
 }
 
 .service-details ul li {
@@ -802,6 +819,7 @@ section {
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+  font-family: "Raleway", sans-serif;
 }
 
 
