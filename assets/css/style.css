@@ -132,6 +132,17 @@ h6 {
   text-decoration: none;
 }
 
+#header {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#header.visible {
+  opacity: 1;
+}
+
+
+
 #main {
   margin-left: 300px;
 }
@@ -314,6 +325,51 @@ h6 {
     margin-bottom: 30px;
   }
 }
+
+#hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+#hero .icon-box {
+  padding: 20px; /* Reduce el padding para probar */
+  transition: ease-in-out 0.3s;
+  border: 2px solid #149ddd; /* Reemplaza color-mix */
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.445);
+  border-radius: 10px;
+}
+
+#hero .icon-box i {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--accent-color);
+}
+
+#hero .icon-box h3 {
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--default-color); /* Define un color directamente */
+}
+
+#hero .icon-box:hover {
+  border-color: var(--accent-color);
+}
+
+#hero .icon-box:hover h3 {
+  color: var(--accent-color);
+}
+
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -1339,3 +1395,4 @@ section {
 .services-list a.active {
   color: #0056b3;
 }
+
