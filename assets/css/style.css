@@ -237,12 +237,16 @@ h6 {
   color: #fff;
   width: 40px;
   height: 40px;
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   line-height: 0;
   border-radius: 50px;
   cursor: pointer;
+}
+
+.mobile-nav-toggle.visible {
+  display: inline-flex; /* Mostrar el ícono cuando tenga la clase 'visible' */
 }
 
 .mobile-nav-active {
@@ -307,6 +311,7 @@ h6 {
   border-bottom: 3px solid #149ddd;
 }
 
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -314,7 +319,7 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+/*   #hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
@@ -323,8 +328,59 @@ h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  } */
+
+  #hero {
+    height: 100vh; /* Reduce la altura de la sección en versión móvil */
   }
+
+  #hero .hero-container {
+    padding-top: 50px; /* Reduce el espacio en la parte superior */
+    padding-bottom: 50px; /* Reduce el espacio en la parte inferior */
+  }
+  
+  #hero h1 {
+    margin-top: 10px; /* Ajusta el margen superior del título */
+    margin-bottom: 30px; /* Reduce el margen inferior */
+    font-size: 50px; /* Ajusta el tamaño del título */
+    text-align: center;
+  }
+
+  #hero p {
+    margin-bottom: 10px; /* Reduce el margen inferior del párrafo */
+    font-size: 20px; /* Ajusta el tamaño del párrafo */
+    text-align: center;
+  }
+
+  #hero .icon-box {
+    padding: 10px; /* Reduce el padding */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+  
+  #hero .col-xl-2 {
+    flex: 0 0 25%; /* Ajusta el ancho de las columnas en pantallas grandes */
+    max-width: 25%;
+  }
+  
+  #hero .col-md-4 {
+    flex: 0 0 50%; /* Ajusta el ancho en pantallas medianas */
+    max-width: 50%;
+  }
+
+  #hero .icon-box i {
+    font-size: 10px; /* Reduce el tamaño del icono */
+  }
+
+  #hero .icon-box h3 {
+    font-size: 10px; /* Ajusta el tamaño del texto */
+  }
+  
+  
 }
+
+
+
+
 
 #hero .container {
   position: relative;
@@ -332,9 +388,9 @@ h6 {
 }
 
 #hero .icon-box {
-  padding: 20px; /* Reduce el padding para probar */
-  transition: ease-in-out 0.3s;
-  border: 2px solid #149ddd; /* Reemplaza color-mix */
+  padding: 20px;
+  transition: all 0.3s ease-in-out; /* Transición suave para todos los cambios */
+  border: 2px solid #149ddd;
   height: 100%;
   text-align: center;
   display: flex;
@@ -349,6 +405,7 @@ h6 {
   font-size: 32px;
   line-height: 1;
   color: var(--accent-color);
+  transition: color 0.3s ease-in-out; /* Transición en el color del icono */
 }
 
 #hero .icon-box h3 {
@@ -357,17 +414,30 @@ h6 {
   padding: 0;
   line-height: 1;
   font-size: 20px;
-  line-height: 26px;
-  color: var(--default-color); /* Define un color directamente */
+  color: var(--default-color);
+  transition: color 0.3s ease-in-out; /* Transición en el color del texto */
 }
 
 #hero .icon-box:hover {
-  border-color: var(--accent-color);
+  background-color: #149ddd; /* Cambia el fondo al hacer hover */
+  color: #ffffff; /* Cambia el color del texto */
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 8px 15px rgba(20, 157, 221, 0.3); /* Sombra */
+}
+
+#hero .icon-box:hover i {
+  color: #ffffff; /* Cambia el color del icono al hacer hover */
 }
 
 #hero .icon-box:hover h3 {
-  color: var(--accent-color);
+  color: #ffffff; /* Cambia el color del texto al hacer hover */
 }
+
+
+
+
+
+
 
 
 
