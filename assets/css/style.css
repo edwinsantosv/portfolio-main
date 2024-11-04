@@ -222,6 +222,20 @@ h6 {
   color: #149ddd;
 }
 
+/* Clase para ocultar el navbar */
+.nav-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Clase para mostrar el navbar */
+.nav-menu.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
