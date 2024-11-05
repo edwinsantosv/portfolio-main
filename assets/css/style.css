@@ -132,6 +132,17 @@ h6 {
   text-decoration: none;
 }
 
+#header {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#header.visible {
+  opacity: 1;
+}
+
+
+
 #main {
   margin-left: 300px;
 }
@@ -211,6 +222,20 @@ h6 {
   color: #149ddd;
 }
 
+/* Clase para ocultar el navbar */
+.nav-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Clase para mostrar el navbar */
+.nav-menu.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
@@ -226,12 +251,16 @@ h6 {
   color: #fff;
   width: 40px;
   height: 40px;
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   line-height: 0;
   border-radius: 50px;
   cursor: pointer;
+}
+
+.mobile-nav-toggle.visible {
+  display: inline-flex; /* Mostrar el ícono cuando tenga la clase 'visible' */
 }
 
 .mobile-nav-active {
@@ -296,6 +325,7 @@ h6 {
   border-bottom: 3px solid #149ddd;
 }
 
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -303,7 +333,7 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+/*   #hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
@@ -312,8 +342,118 @@ h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  } */
+
+  #hero {
+    height: 100vh; /* Reduce la altura de la sección en versión móvil */
   }
+
+  #hero .hero-container {
+    padding-top: 50px; /* Reduce el espacio en la parte superior */
+    padding-bottom: 50px; /* Reduce el espacio en la parte inferior */
+  }
+  
+  #hero h1 {
+    margin-top: 10px; /* Ajusta el margen superior del título */
+    margin-bottom: 30px; /* Reduce el margen inferior */
+    font-size: 50px; /* Ajusta el tamaño del título */
+    text-align: center;
+  }
+
+  #hero p {
+    margin-bottom: 10px; /* Reduce el margen inferior del párrafo */
+    font-size: 20px; /* Ajusta el tamaño del párrafo */
+    text-align: center;
+  }
+
+  #hero .icon-box {
+    padding: 10px; /* Reduce el padding */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+  
+  #hero .col-xl-2 {
+    flex: 0 0 25%; /* Ajusta el ancho de las columnas en pantallas grandes */
+    max-width: 25%;
+  }
+  
+  #hero .col-md-4 {
+    flex: 0 0 50%; 
+    max-width: 50%;
+  }
+
+  #hero .icon-box i {
+    font-size: 10px; /* Reduce el tamaño del icono */
+  }
+
+  #hero .icon-box h3 {
+    font-size: 10px; 
+  }
+  
+  
 }
+
+
+
+
+
+#hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+#hero .icon-box {
+  padding: 20px;
+  transition: all 0.3s ease-in-out; /* Transición suave para todos los cambios */
+  border: 2px solid #149ddd;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.445);
+  border-radius: 10px;
+}
+
+#hero .icon-box i {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--accent-color);
+  transition: color 0.3s ease-in-out; /* Transición en el color del icono */
+}
+
+#hero .icon-box h3 {
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  color: var(--default-color);
+  transition: color 0.3s ease-in-out; /* Transición en el color del texto */
+}
+
+#hero .icon-box:hover {
+  background-color: #149ddd; /* Cambia el fondo al hacer hover */
+  color: #ffffff; /* Cambia el color del texto */
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 8px 15px rgba(20, 157, 221, 0.3); /* Sombra */
+}
+
+#hero .icon-box:hover i {
+  color: #ffffff; /* Cambia el color del icono al hacer hover */
+}
+
+#hero .icon-box:hover h3 {
+  color: #ffffff; /* Cambia el color del texto al hacer hover */
+}
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -1339,3 +1479,4 @@ section {
 .services-list a.active {
   color: #0056b3;
 }
+
