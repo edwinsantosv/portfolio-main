@@ -860,14 +860,15 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    window.addEventListener("scroll", function() {
-      var footer = document.getElementById("footer");
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        // you're at the bottom of the page
-        footer.style.opacity = 1;
-      } else {
-        footer.style.opacity = 0;
-      }
+    document.addEventListener("DOMContentLoaded", function() {
+      window.addEventListener("scroll", function() {
+        var footer = document.getElementById("footer");
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          footer.style.opacity = 1;
+        } else {
+          footer.style.opacity = 0;
+        }
+      });
     });
   </script>
 
