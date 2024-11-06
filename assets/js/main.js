@@ -8,8 +8,8 @@
 (function() {
   "use strict";
   document.addEventListener("DOMContentLoaded", function() {
-    // Verificar si estamos en index.html o en la raíz del sitio
-    if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname === "") {
+    // Verificar si estamos en la raíz del sitio o en index.html
+    if (window.location.pathname === "/" || window.location.pathname.endsWith("/portfolio-v2.github.io/") || window.location.pathname.endsWith("index.html")) {
       window.addEventListener("scroll", function() {
         const header = document.getElementById("header");
         const hero = document.getElementById("hero");
@@ -41,6 +41,7 @@
       }
     }
   });
+  
   
 
   /**
