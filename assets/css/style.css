@@ -350,7 +350,7 @@ h6 {
 
   #hero .hero-container {
     padding-top: 50px; /* Reduce el espacio en la parte superior */
-    padding-bottom: 50px; /* Reduce el espacio en la parte inferior */
+    padding-bottom: 10px; /* Reduce el espacio en la parte inferior */
   }
   
   #hero h1 {
