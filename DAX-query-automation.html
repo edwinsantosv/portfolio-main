@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>E-Commerce Sales Dashboard</title>
+  <title>DAX Queries Automation With Deepseek and Power Automate</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -93,7 +93,7 @@
           <h2>Project Details</h2>
           <ol>
             <li><a href="index.html#portfolio">Projects</a></li>
-            <li>E-commerce Sales Dashboard</li>
+            <li>DAX Queries Automation With Deepseek and Power Automate</li>
           </ol>
         </div>
 
@@ -108,10 +108,28 @@
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/e-commerce-analysis-1.png" alt="">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/1.png" alt="">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/e-commerce-analysis-2.png" alt="">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/3.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/4.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/5.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/6.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/7.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/DAX Automation with Deepseek/8.png" alt="">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -122,30 +140,27 @@
             <div class="portfolio-info">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category:</strong> Data Analytics</li>
-                <li><strong>Platform:</strong> Microsoft Power BI</li>
+                <li><strong>Category:</strong> Generative AI</li>
+                <li><strong>Platform:</strong> Power Automate</li>
               </ul>
             </div>
             <div class="portfolio-description">
               <h3>Objective</h3>
               <p>
-                To contribute to the success of a business by utilizing data analysis techniques, specifically focusing on time series analysis,
-                to provide valuable insights and accurate sales forecasting.
+              Power Automate is a highly versatile tool that enables seamless interaction across various software within the Microsoft 365 ecosystem. Its diverse set of features becomes even more powerful with the integration of AI, offering advanced automation capabilities. However, the elevated costs remain a challenge, particularly when deploying AI-driven tools in production, highlighting the need for cost-effective solutions.
               </p>
-              <ul>
-                <li><strong>Highlights:</strong></li>
-              </ul>
+              <p>
+              To address this, I have designed a system that integrates Power Automate to simplify query generation in Power BI. By utilizing prompts, the system searches datasets, identifies relevant tables, and leverages the Deepseek API—an affordable AI tool—to generate DAX queries. This approach empowers users to perform queries independently, reducing dependency on the BI team and allowing us to focus on more strategic initiatives.
+              </p>
+              <h3>Workflow Steps:</h3>
               <ol>
-                <li><u>Dashboard Creation:</u> Identify the KPIs, design an intuitive and visually appealing dashboard, add interactive visualizations 
-                  and filtering capabilities to allow users to explore the data at various granularites.
-                </li>
-                <li><u>Data Analysis:</u> Provide valuable insights to business entities regarding the effectiveness of their sales strategies 
-                  through visualizations and charts.
-                </li>
-                <li><u>Sales Forecasting:</u> Leverage historic data and apply time series analysis to generate sales forecast for next 15 days.</li>
-                <li><u>Actionable insights and recommendations:</u> End goal is to share valuable insights and actionable information that can drive 
-                  strategic decision-making and support the supermarket's goals for growth, efficiency, and customer satisfaction.
-                </li>
+              <li><u>User Prompt:</u> The user provides a query prompt to the system, such as: "I want the top 10 users in terms of revenue."</li>
+              <li><u>AI Query Trigger:</u> Power Automate sends the prompt via an HTTP request to the AI, which analyzes it, scans the dataset’s table descriptions, and identifies the necessary table names and columns.</li>
+              <li><u>Generate DAX Query:</u> The system triggers a second HTTP request to create the corresponding DAX query based on the identified tables and columns.</li>
+              <li><u>Data Transformation:</u> The results are processed using Power Automate’s "Compose" action to extract only the essential information for the DAX query.</li>
+              <li><u>Run DAX Query:</u> The generated DAX query is executed against the dataset, and the output is returned in JSON format.</li>
+              <li><u>Add Data to Excel:</u> The resulting data is formatted and added as a new row in an Excel report.</li>
+              <li><u>Send Report:</u> The final report is sent to the user via email using the Outlook connector.</li>
               </ol>
             </div>
           </div>
